@@ -1,0 +1,40 @@
+{
+  "name": "grunt-cleanx",
+  "description": "The best sample grunt tasks ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/99corps/grunt-cleanx",
+  "author": {
+    "name": "JO YONG-HYU",
+    "email": "99corps@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/99corps/grunt-cleanx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/99corps/grunt-cleanx/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/99corps/grunt-cleanx/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "bin": "bin/grunt-cleanx",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "grunt": "~0.3.11"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.11"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
