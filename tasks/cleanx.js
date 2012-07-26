@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 	// TASKS
 	// ==========================================================================
 	
-	grunt.registerMultiTask('cleanx', 'Clean directory', function () {
+	grunt.registerMultiTask('clean', 'Clean directory', function () {
 		var dirs = this.data.dirs;
 
 		for (var i = 0, dlen = dirs.length; i < dlen; i += 1) {
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 	// HELPERS
 	// ==========================================================================
 
-	grunt.registerHelper('cleanx', function() {
-		return 'cleanx!!!';
+	grunt.registerHelper('clean', function() {
+		return 'clean!!!';
 	});
 };
