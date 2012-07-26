@@ -1,6 +1,6 @@
 {
   "name": "grunt-cleanx",
-  "description": "The best sample grunt tasks ever.",
+  "description": "Clean Build Directory",
   "version": "0.1.0",
   "homepage": "https://github.com/99corps/grunt-cleanx",
   "author": {
