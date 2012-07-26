@@ -1,6 +1,6 @@
 # grunt-cleanx
 
-The best sample grunt tasks ever.
+Clean Build Directory
 
 ## Getting Started
 Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-cleanx`
@@ -15,13 +15,30 @@ grunt.loadNpmTasks('grunt-cleanx');
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
 
 ## Documentation
-_(Coming soon)_
+Configure which directories to delete in your `initConfig`:
+```javascript
+grunt.initConfig({
+  // ... other configs
+
+  clean: {
+	js : {
+    	dirs: [
+			"js/dist/"
+		]
+	}
+  }
+
+  // ... other configs
+});
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
 
 ## Release History
-_(Nothing yet)_
+* 2012/7/26 - v0.1.0 - initial release
+* 2012/7/27 - v0.3.0
 
 ## License
 Copyright (c) 2012 JO YONG-HYU  
