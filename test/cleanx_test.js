@@ -20,7 +20,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports['cleanx'] = {
+exports['clean'] = {
   setUp: function(done) {
     // setup here
     done();
@@ -28,7 +28,7 @@ exports['cleanx'] = {
   'helper': function(test) {
     test.expect(1);
     // tests here
-    test.equal(grunt.helper('cleanx'), 'cleanx!!!', 'should return the correct value.');
+    test.equal(grunt.helper('clean'), 'clean!!!', 'should return the correct value.');
     test.done();
   }
 };
