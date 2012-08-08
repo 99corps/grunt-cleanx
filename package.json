@@ -1,7 +1,7 @@
 {
   "name": "grunt-cleanx",
   "description": "Clean Build Directory",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "homepage": "https://github.com/99corps/grunt-cleanx",
   "author": {
     "name": "JO YONG-HYU",

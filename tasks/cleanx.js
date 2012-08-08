@@ -16,34 +16,55 @@ module.exports = function(grunt) {
 	// ==========================================================================
 	// TASKS
 	// ==========================================================================
-	
+
 	grunt.registerMultiTask('clean', 'Clean directory', function () {
 		var dirs = this.data.dirs;
+		var files = this.data.files;
 		var existsSync = fs.existsSync || path.existsSync;
-		
-		for (var i = 0, dlen = dirs.length; i < dlen; i += 1) {
-			if (existsSync(dirs[i])) {
-				try {
-					var files = fs.readdirSync(dirs[i]);
-				} catch(e) {
-					grunt.log.writeln('cant read directoty. cause by error message :', e); 
-					return;
-				}   
-					
-				if (files.length > 0) {
-					for(var j = 0, flen = files.length; j < flen; j += 1) {
-						var filePath = dirs[i] + files[j];
-						if (fs.statSync(filePath).isFile()) {
-							fs.unlinkSync(filePath);
+			
+		var fileArr, filePath, dlen, flen;
+		var i, j = 0;
+
+		if (dirs && dirs.length > 0) {
+			for (i = 0, dlen = dirs.length; i < dlen; i += 1) {
+				if (existsSync(dirs[i])) {
+					try {
+						fileArr = fs.readdirSync(dirs[i]);
+					} catch(e) {
+						grunt.log.writeln('cant read directoty. cause by error message :', e);
+						return;
+					}				
+					if (fileArr.length > 0) {
+						for(j = 0, flen = fileArr.length; j < flen; j += 1) {
+							filePath = dirs[i] + fileArr[j];
+							if (fs.statSync(filePath).isFile()) {
+								fs.unlinkSync(filePath);
+							}   
 						}   
 					}   
+					fs.rmdirSync(dirs[i]);
+					grunt.log.writeln(dirs[i],'has been deleted.');
 				}   
-				fs.rmdirSync(dirs[i]);
-				grunt.log.writeln(dirs[i],'has been deleted.');
+			}
+		}
+
+		if (files && files.length > 0) {
+			for (i = 0, flen = files.length; i < flen; i += 1) {
+				try {
+					if (fs.statSync(files[i]).isFile()) {
+						fs.unlinkSync(files[i]);
+					}   
+				} catch (er) {	// if there is no such file or directory
+					if (er.code === "ENOENT") {
+						return;
+					}   
+					throw er; 
+				}   
+				grunt.log.writeln(files[i], 'has been deleted.');
 			}   
 		}   
-	});
-
+	}); 
+	
 	// ==========================================================================
 	// HELPERS
 	// ==========================================================================
