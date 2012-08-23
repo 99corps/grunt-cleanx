@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/99corps/grunt-cleanx.png)](http://travis-ci.org/99corps/grunt-cleanx)
 # grunt-cleanx
 
 Clean Build Directory and File
