@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 					}				
 					if (fileArr.length > 0) {
 						for(j = 0, flen = fileArr.length; j < flen; j += 1) {
-							filePath = dirs[i] + fileArr[j];
+							filePath = dirs[i] + '/' + fileArr[j];
 							if (fs.statSync(filePath).isFile()) {
 								fs.unlinkSync(filePath);
 							}   
