@@ -36,15 +36,18 @@ module.exports = function(grunt) {
 					}				
 					if (fileArr.length > 0) {
 						for(j = 0, flen = fileArr.length; j < flen; j += 1) {
-							filePath = dirs[i] + fileArr[j];
+							filePath = dirs[i].substring(dirs[i].length-1) === "/" ? dirs[i] : dirs[i] + "/";
+							filePath = filePath + fileArr[j];
 							if (fs.statSync(filePath).isFile()) {
 								fs.unlinkSync(filePath);
 							}   
-						}   
+						} 
 					}   
 					fs.rmdirSync(dirs[i]);
 					grunt.log.writeln(dirs[i],'has been deleted.');
-				}   
+				} else {
+					console.log(dirs[i], "is not exist directory or incorrect directory, check your clean task's configuration in grunt.js");
+				}  
 			}
 		}
 

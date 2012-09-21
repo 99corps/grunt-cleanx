@@ -1,3 +1,5 @@
++[![build status](https://secure.travis-ci.org/99corps/grunt-cleanx.png)](http://travis-ci.org/99corps/grunt-cleanx)
+
 # grunt-cleanx
 
 Clean Build Directory and File
@@ -23,7 +25,8 @@ grunt.initConfig({
   clean: {
 	js : {
     	dirs: [
-			"js/dist/"
+			"js/dist/",
+			"./js/dist" (directory name does not contain a slash("/") in last string, but will run well)
 		],
 		files: [
 			"js/example1.js",
@@ -44,6 +47,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * 2012/7/26 - v0.1.0 - initial release
 * 2012/7/27 - v0.3.0
 * 2012/8/8 - v0.4.0 - added a new option to clean files
+* 2012/9/21 - v0.4.1 - add check logic, whether slash("/")  directory name contain slash("/") or does not contain in last string
 
 ## License
 Copyright (c) 2012 JO YONG-HYU  
