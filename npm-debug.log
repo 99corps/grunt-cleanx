@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'publish' ]
+2 info using npm@1.1.32
+3 info using node@v0.6.19
+4 verbose node symlink /usr/bin/node
+5 verbose config file /home/99corps/.npmrc
+6 verbose config file /usr/etc/npmrc
+7 verbose config file /usr/lib/node_modules/npm/npmrc
+8 verbose publish [ '.' ]
+9 verbose read json /data/hayabusa/web/custom_modules/grunt-cleanx/package.json
+10 verbose cache add [ '.', null ]
+11 silly cache add name=undefined spec="." args=[".",null]
+12 verbose parsed url { pathname: '.', path: '.', href: '.' }
+13 verbose read json package.json
+14 verbose tar pack [ '/home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/tmp.tgz',
+14 verbose tar pack   '.' ]
+15 verbose tarball /home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/tmp.tgz
+16 verbose folder .
+17 info prepublish grunt-cleanx@0.4.1
+18 verbose tar unpack /home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/tmp.tgz
+19 silly gunzTarPerm modes [ '755', '644' ]
+20 silly gunzTarPerm extractEntry package.json
+21 silly gunzTarPerm extractEntry .npmignore
+22 silly gunzTarPerm extractEntry README.md
+23 silly gunzTarPerm extractEntry grunt.js
+24 silly gunzTarPerm extractEntry test/cleanx_test.js
+25 silly gunzTarPerm extractEntry .travis.yzml
+26 silly gunzTarPerm extractEntry tasks/cleanx.js
+27 silly gunzTarPerm extractEntry LICENSE-MIT
+28 silly gunzTarPerm extractEntry bin/grunt-cleanx
+29 verbose read json /home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/package/package.json
+30 verbose from cache /home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/package/package.json
+31 verbose tar pack [ '/home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz',
+31 verbose tar pack   '/home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/package' ]
+32 verbose tarball /home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz
+33 verbose folder /home/99corps/tmp/npm-1348218729618/1348218729618-0.4038399427663535/package
+34 verbose tar unpack /home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz
+35 silly gunzTarPerm modes [ '755', '644' ]
+36 silly gunzTarPerm extractEntry package.json
+37 silly gunzTarPerm extractEntry .npmignore
+38 silly gunzTarPerm extractEntry README.md
+39 silly gunzTarPerm extractEntry grunt.js
+40 silly gunzTarPerm extractEntry test/cleanx_test.js
+41 silly gunzTarPerm extractEntry .travis.yzml
+42 silly gunzTarPerm extractEntry tasks/cleanx.js
+43 silly gunzTarPerm extractEntry LICENSE-MIT
+44 silly gunzTarPerm extractEntry bin/grunt-cleanx
+45 verbose read json /home/99corps/.npm/grunt-cleanx/0.4.1/package/package.json
+46 silly shasum updated bytes 3338
+47 info shasum 4a16f9669f2697e9a2e3649fa47fbcdcea2b3ce4
+47 info shasum /home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz
+48 verbose from cache /home/99corps/.npm/grunt-cleanx/0.4.1/package/package.json
+49 verbose chmod /home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz 644
+50 verbose chown /home/99corps/.npm/grunt-cleanx/0.4.1/package.tgz [ 1000, 1000 ]
+51 silly publish { name: 'grunt-cleanx',
+51 silly publish   description: 'Clean Build Directory',
+51 silly publish   version: '0.4.1',
+51 silly publish   homepage: 'https://github.com/99corps/grunt-cleanx',
+51 silly publish   author: { name: 'JO YONG-HYU', email: '99corps@gmail.com' },
+51 silly publish   repository:
+51 silly publish    { type: 'git',
+51 silly publish      url: 'git://github.com/99corps/grunt-cleanx.git' },
+51 silly publish   bugs: { url: 'https://github.com/99corps/grunt-cleanx/issues' },
+51 silly publish   licenses:
+51 silly publish    [ { type: 'MIT',
+51 silly publish        url: 'https://github.com/99corps/grunt-cleanx/blob/master/LICENSE-MIT' } ],
+51 silly publish   main: 'grunt.js',
+51 silly publish   bin: { 'grunt-cleanx': 'bin/grunt-cleanx' },
+51 silly publish   engines: { node: '*' },
+51 silly publish   scripts: { test: 'grunt test' },
+51 silly publish   dependencies: { grunt: '~0.3.11' },
+51 silly publish   devDependencies: { grunt: '~0.3.11' },
+51 silly publish   keywords: [ 'gruntplugin' ],
+51 silly publish   readme: '[![build status](https://secure.travis-ci.org/99corps/grunt-cleanx.png)](http://travis-ci.org/99corps/grunt-cleanx)\n\n# grunt-cleanx\n\nClean Build Directory and File\n\n## Getting Started\nInstall this grunt plugin next to your project\'s [grunt.js gruntfile][getting_started] with: `npm install grunt-cleanx`\n\nThen add this line to your project\'s `grunt.js` gruntfile:\n\n```javascript\ngrunt.loadNpmTasks(\'grunt-cleanx\');\n```\n\n[grunt]: https://github.com/cowboy/grunt\n[getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md\n\n## Documentation\nConfigure which directories or files to delete in your `initConfig`:\n```javascript\ngrunt.initConfig({\n  // ... other configs\n\n  clean: {\n\tjs : {\n    \tdirs: [\n\t\t\t"js/dist/",\n\t\t\t"./js/dist" (directory name does not contain a slash("/") in last string, but will run well)\n\t\t],\n\t\tfiles: [\n\t\t\t"js/example1.js",\n\t\t\t"js/example2.js"\n\t\t]\n\t}\n  }\n\n  // ... other configs\n});\n```\n\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].\n\n## Release History\n* 2012/7/26 - v0.1.0 - initial release\n* 2012/7/27 - v0.3.0\n* 2012/8/8 - v0.4.0 - added a new option to clean files\n* 2012/9/21 - v0.4.1 - add check logic, whether slash("/")  directory name contain slash("/") or does not contain in last string\n\n## License\nCopyright (c) 2012 JO YONG-HYU  \nLicensed under the MIT license.\n',
+51 silly publish   _id: 'grunt-cleanx@0.4.1',
+51 silly publish   dist: { shasum: '4a16f9669f2697e9a2e3649fa47fbcdcea2b3ce4' } }
+52 verbose url raw grunt-cleanx
+53 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cleanx' ]
+54 verbose url resolved https://registry.npmjs.org/grunt-cleanx
+55 http PUT https://registry.npmjs.org/grunt-cleanx
+56 http 409 https://registry.npmjs.org/grunt-cleanx
+57 verbose url raw grunt-cleanx
+58 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cleanx' ]
+59 verbose url resolved https://registry.npmjs.org/grunt-cleanx
+60 http GET https://registry.npmjs.org/grunt-cleanx
+61 http 200 https://registry.npmjs.org/grunt-cleanx
+62 error publish fail Cannot publish over existing version.
+62 error publish fail Bump the 'version' field, set the --force flag, or
+62 error publish fail     npm unpublish 'grunt-cleanx@0.4.1'
+62 error publish fail and try again
+63 error System Linux 2.6.32-41-server
+64 error command "node" "/usr/bin/npm" "publish"
+65 error cwd /data/hayabusa/web/custom_modules/grunt-cleanx
+66 error node -v v0.6.19
+67 error npm -v 1.1.32
+68 error code EPUBLISHCONFLICT
+69 error message publish fail
+70 verbose exit [ 1, true ]
