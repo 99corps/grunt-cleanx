@@ -49,7 +49,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * 2012/8/8 - v0.4.0 - added a new option to clean files
 * 2012/9/21 - v0.4.2 - add check logic, whether slash("/")  directory name contain slash("/") or does not contain in last string
 * 2012/9/24 - v0.5.0 - add build.js file for runninig test and verify in travis
-* 2012/11/27 - v0.5.1 - remove registerHelpers of task
+* 2012/11/27 - v0.5.2 - remove registerHelpers of task
+
 ## License
 Copyright (c) 2012 JO YONG-HYU  
 Licensed under the MIT license.
